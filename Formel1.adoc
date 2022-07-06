@@ -1,0 +1,58 @@
+= Formel 1
+
+== Objects
+
+. Fahrer
+.. Name
+.. Vorname
+.. Mail
+.. Strasse
+.. Geburtsdatum
+
+== Usecases
+
+=== UC-1 neuer Fahrer
+
+Ich möchte einen neuen Fahrer hinzufügen.
+Ich will selber entscheiden wie der Fahrer heisst etc.
+
+=== Sequenz
+
+.Sequenz neuer Fahrer
+[plantuml]
+----
+@startuml
+
+actor user
+
+user -> backend : POST driver
+note right: Alle Attribute manuell hinzufügen
+backend -> user : 200
+note left: Neuer Driver erstellt
+
+
+@enduml
+----
+
+=== UC-2 neuer Fahrer mit invaliden Attributen
+
+Ich möchte einen neuen Fahrer hinzufügen.
+ich gebe invalide Daten an.
+
+=== Sequenz
+
+.Sequenz neuer Fahrer
+[plantuml]
+----
+@startuml
+
+actor user
+
+user -> backend : POST driver
+note right: Falsche Attribute manuell hinzufügen
+backend -> user : Fehler wird erkannt
+note left: Fehlermeldung wird angezeigt
+
+
+@enduml
+----
