@@ -28,13 +28,25 @@ public class Driver {
     private String street;
 
     @NotNull
-    @Past(message="muss in der Verganganheit sein")
-    @DateTimeFormat(pattern="yyyy-MM-dd")   // für html 5 date!
+    @Past(message = "muss in der Verganganheit sein")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")   // für html 5 date!
     private Date birthdate;
 
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public Driver(String firstName, String lastName, int age, String email, String street, Date birthdate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.email = email;
+        this.street = street;
+        this.birthdate = birthdate;
+    }
+
+    public Driver() {
     }
 
     public void setFirstName(String firstName) {
