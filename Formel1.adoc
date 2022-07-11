@@ -1,14 +1,5 @@
 = Formel 1
 
-== Objects
-
-. Fahrer
-.. Name
-.. Vorname
-.. Mail
-.. Strasse
-.. Geburtsdatum
-
 == Usecases
 
 === UC-1 neuer Fahrer
@@ -41,7 +32,7 @@ ich gebe invalide Daten an.
 
 === Sequenz
 
-.Sequenz neuer Fahrer
+.Sequenz neuer Fahrer mit invaliden Attributen
 [plantuml]
 ----
 @startuml
@@ -52,6 +43,28 @@ user -> backend : POST driver
 note right: Falsche Attribute manuell hinzufügen
 backend -> user : Fehler wird erkannt
 note left: Fehlermeldung wird angezeigt
+
+
+@enduml
+----
+
+=== UC-3 Alle erstellten Driver anschauen
+
+Ich möchte alle Erstellten Fahrer anschauen und ihre Infos wissen.
+
+=== Sequenz
+
+.Alle erstellten Driver anschauen
+[plantuml]
+----
+@startuml
+
+actor user
+
+user -> backend: klicken auf link zu "Drivers table"
+note right: neue Seite wird geöffnet
+backend -> user : Alles Fahrer aufzeigen
+note left: Alle Fahrer sind in der Tabelle
 
 
 @enduml
