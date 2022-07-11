@@ -1,5 +1,17 @@
 = Formel 1
 
+== Warum haben wir uns für F1 entschieden?
+
+Da wir alle Formel 1 mögen und weil Joey mit Noel schon eine F1 Application mit React gemacht hatten, entschieden wir uns dazu, dassselbe mit Thymleaf zu machen.
+
+== Was kann unser Programm?
+
+Mit F1 App kann man auf dem Tab "Driver" Fahrer abspeichern. Dazu muss man den Namen, Alter, Mail, Strasse und Geburtsdatum eingeben. Bei Fehlern wird das auch direkt angezeigt.
+
+Um die gespeicherten Fahrer anzuschauen, kann man auf den "Driver Table" Tab gehen und dort ist eine Tabelle mit allen F1 Fahrern.
+
+Zudem zeigt unser Programm je nach im Browser eingestellter Sprache den entsprechenden Text an.
+
 == Usecases
 
 === UC-1 neuer Fahrer

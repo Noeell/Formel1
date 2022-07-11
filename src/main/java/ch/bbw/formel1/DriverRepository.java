@@ -21,7 +21,7 @@ public class DriverRepository {
         return drivers;
     }
 
-    public void addDriver(Driver driver){
+    public void addDriver(Driver driver) {
         drivers.add(driver);
     }
 }

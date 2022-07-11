@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.validation.constraints.*;
 import java.util.Date;
 
+
 public class Driver {
 
     @NotNull
@@ -19,7 +20,7 @@ public class Driver {
     @Min(18)
     private int age;
 
-    @NotNull
+    @NotEmpty
     @Email
     private String email;
 
@@ -45,6 +46,7 @@ public class Driver {
         this.street = street;
         this.birthdate = birthdate;
     }
+
 
     public Driver() {
     }
