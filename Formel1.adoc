@@ -70,6 +70,29 @@ note left: Alle Fahrer sind in der Tabelle
 @enduml
 ----
 
+=== UC-4 Reset Knopf
+
+Ich möchte einen falschen Fahrer auf der "Driver" Seite
+erstellen, merke allerdings bevor ich ihn abschicke,
+dass es der falsche ist.
+
+=== Sequenz
+
+.Reset Knopf
+[plantuml]
+----
+@startuml
+
+actor user
+
+user -> backend: Reset Knopf
+note right: Falscher Fahrer eingegeben
+backend -> user : Eingaben leeren
+note left: Man kann einen anderen Fahrer erstellen
+
+
+@enduml
+----
 
 == Skizzen
 
