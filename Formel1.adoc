@@ -69,3 +69,20 @@ note left: Alle Fahrer sind in der Tabelle
 
 @enduml
 ----
+
+
+== Skizzen
+
+=== Layout
+image::src/main/resources/Layout.png[]
+
+=== GUI
+
+==== Home
+image::src/main/resources/Home.png[]
+
+==== Driver
+image::src/main/resources/Driver.png[]
+
+==== Drivers table
+image::src/main/resources/DriversTable.png[]
