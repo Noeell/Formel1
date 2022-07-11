@@ -12,38 +12,41 @@
         <form th:action="@{/driver}" th:object="${driver}" method="post">
             <table class="table table-striped">
                 <tr>
-                    <td><input class="form-control" id="inputPasswordConfirm" type="text" th:field="*{firstName}" th:placeholder="#{driver.firstName}"/></td>
+                    <td th:text="#{driver.firstName}">Firstname:</td>
+                    <td><input class="form-control" id="inputPasswordConfirm" type="text" th:field="*{firstName}"/></td>
                     <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Name Error</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td th:text="#{driver.lastName}">Lastname:</td>
-                    <td><input type="text" th:field="*{lastName}"/></td>
+                    <td><input class="form-control" id="inputPasswordConfirm" type="text" th:field="*{lastName}"/></td>
                     <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Name Error</td>
                 </tr>
                 <tr>
                     <td th:text="#{driver.age}">Age:</td>
-                    <td><input type="number" th:field="*{age}"/></td>
+                    <td><input class="form-control" id="inputPasswordConfirm" type="number" th:field="*{age}"/></td>
                     <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</td>
                 </tr>
                 <tr>
                     <td th:text="#{driver.mail}">Mail:</td>
-                    <td><input type="text" th:field="*{email}"/></td>
+                    <td><input class="form-control" id="inputPasswordConfirm" type="text" th:field="*{email}"/></td>
                     <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Name Error</td>
                 </tr>
                 <tr>
                     <td th:text="#{driver.street}">Streeet:</td>
-                    <td><input type="text" th:field="*{street}"/></td>
+                    <td><input class="form-control" id="inputPasswordConfirm" type="text" th:field="*{street}"/></td>
                     <td th:if="${#fields.hasErrors('street')}" th:errors="*{street}">Name Error</td>
                 </tr>
                 <tr>
                     <td th:text="#{driver.birthday}">birthday:</td>
-                    <td><input type="date" th:field="*{birthdate}"/></td>
+                    <td><input class="form-control" id="inputPasswordConfirm" type="date" th:field="*{birthdate}"/></td>
                     <td th:if="${#fields.hasErrors('birthdate')}" th:errors="*{birthdate}">Birthday error</td>
                 </tr>
                 <tr>
-                    <td><input type="submit"
+                    <td>
+                        <input class="btn btn-primary btn-block" type="submit"
                                value="Submit"/>
-                        <input type="reset"
+                        <input class="btn btn-primary btn-block" type="reset"
                                value="Reset"/></td>
                 </tr>
             </table>
